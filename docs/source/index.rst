@@ -3,18 +3,30 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Creative Club's documentation!
-=========================================
+Вики Creative Club
+==================
 
-Contents:
+Говорят, обещанного три года ждут... Не правда, всего год :)
+
+Добро пожаловать в вики нашего креативного клуба. Тут будут публиковаться ссылки на доклады клуба, 
+демо-проекты, справочная информация, а также другие полезные материалы. Подробнее - смотрите 
+содержание ниже.
+
+
+Содержание
+-----------
 
 .. toctree::
    :maxdepth: 2
+   
+   intro_to_the_club
+   demo_projects
+   useful_matherials
+   
 
 
-
-Indices and tables
-==================
+Индексы и таблицы
+-----------------
 
 * :ref:`genindex`
 * :ref:`modindex`
