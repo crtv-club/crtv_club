@@ -22,11 +22,4 @@
    intro_to_the_club
    demo_projects
    useful_matherials
-   
-
-
-Индексы и таблицы
------------------
-
-* :ref:`search`
 
