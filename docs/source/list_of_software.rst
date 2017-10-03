@@ -31,7 +31,7 @@ Raspberry
 - `PyCharm Professional <https://www.jetbrains.com/student/>`_ - IDE для python.
    Можно писать код на компе, а запускать и отлаживать на Raspberry Pi
 - `QtCreator <https://www1.qt.io/download-open-source/#section-9>`_ - IDE для C и C++.
-   Можно писать код на компе, а запускать и отлаживать на Raspberry Pi
+  Можно писать код на компе, а запускать и отлаживать на Raspberry Pi
 - dd, `Etcher <https://www.raspberrypi.org/documentation/installation/installing-images/README.md>`_ и прочие:
   для прошивки образов (ОС) на карту памяти
 - `Ninja IDE <http://ninja-ide.org/>`_ - ставится на саму Raspberry Pi, IDE для Python.
