@@ -20,4 +20,4 @@
    :maxdepth: 2
    
    list_of_software
-
+   soldering_cheatsheet
