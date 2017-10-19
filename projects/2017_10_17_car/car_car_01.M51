@@ -1,0 +1,307 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        10/17/2017  19:27:18  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE main.obj TO car_car_01 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?UIDIV)
+
+
+LINK MAP OF MODULE:  car_car_01 (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         _DATA_GROUP_
+            IDATA   000AH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     005FH     UNIT         ?PR?MAIN?MAIN
+            CODE    085FH     0055H     UNIT         ?C?LIB_CODE
+            CODE    08B4H     0032H     UNIT         ?PR?MEASUREDISTANCECM?MAIN
+            CODE    08E6H     0023H     UNIT         ?PR?GETPULSEWIDTH_US?MAIN
+            CODE    0909H     0019H     UNIT         ?PR?_DELAY_US?MAIN
+            CODE    0922H     0018H     UNIT         ?PR?_DELAY_MS?MAIN
+            CODE    093AH     0015H     UNIT         ?PR?CAR_INIT?MAIN
+            CODE    094FH     000CH     UNIT         ?C_C51STARTUP
+            CODE    095BH     0007H     UNIT         ?PR?MOVE_FORWARD?MAIN
+            CODE    0962H     0007H     UNIT         ?PR?MOVE_BACKWARD?MAIN
+            CODE    0969H     0007H     UNIT         ?PR?MOVE_STOP?MAIN
+            CODE    0970H     0007H     UNIT         ?PR?MOVE_DISABLE?MAIN
+            CODE    0977H     0007H     UNIT         ?PR?ROTATE_RIGHT?MAIN
+            CODE    097EH     0007H     UNIT         ?PR?ROTATE_LEFT?MAIN
+            CODE    0985H     0007H     UNIT         ?PR?ROTATE_DISABLE?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   car_car_01 (MAIN)
+
+
+SEGMENT                              DATA_GROUP 
+  +--> CALLED SEGMENT              START    LENGTH
+--------------------------------------------------
+?C_C51STARTUP                      -----    -----
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN                      0008H    0002H
+  +--> ?PR?CAR_INIT?MAIN
+  +--> ?PR?MOVE_FORWARD?MAIN
+  +--> ?PR?_DELAY_MS?MAIN
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/17/2017  19:27:18  PAGE 2
+
+
+  +--> ?PR?MEASUREDISTANCECM?MAIN
+  +--> ?PR?MOVE_STOP?MAIN
+  +--> ?PR?ROTATE_RIGHT?MAIN
+  +--> ?PR?MOVE_BACKWARD?MAIN
+  +--> ?PR?ROTATE_DISABLE?MAIN
+
+?PR?CAR_INIT?MAIN                  -----    -----
+  +--> ?PR?MOVE_FORWARD?MAIN
+  +--> ?PR?MOVE_BACKWARD?MAIN
+  +--> ?PR?MOVE_STOP?MAIN
+  +--> ?PR?ROTATE_RIGHT?MAIN
+  +--> ?PR?ROTATE_LEFT?MAIN
+  +--> ?PR?MOVE_DISABLE?MAIN
+  +--> ?PR?ROTATE_DISABLE?MAIN
+
+?PR?_DELAY_MS?MAIN                 -----    -----
+  +--> ?PR?_DELAY_US?MAIN
+
+?PR?MEASUREDISTANCECM?MAIN         -----    -----
+  +--> ?PR?_DELAY_US?MAIN
+  +--> ?PR?GETPULSEWIDTH_US?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  car_car_01 (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  C:095BH         PUBLIC        move_forward
+  C:0977H         PUBLIC        rotate_right
+  D:00B8H         PUBLIC        IP
+  C:08E6H         PUBLIC        getPulseWidth_us
+  C:097EH         PUBLIC        rotate_left
+  C:0800H         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  B:0090H.4       PUBLIC        MOTOR1_EN
+  B:0090H.5       PUBLIC        MOTOR2_EN
+  B:0088H.7       PUBLIC        TF1
+  C:0985H         PUBLIC        rotate_disable
+  D:008DH         PUBLIC        TH1
+  C:093AH         PUBLIC        car_init
+  D:008BH         PUBLIC        TL1
+  B:00A0H.1       PUBLIC        S_ECHO
+  C:0922H         PUBLIC        _delay_ms
+  B:0088H.6       PUBLIC        TR1
+  C:08B4H         PUBLIC        measureDistanceCm
+  C:0909H         PUBLIC        _delay_us
+  C:0962H         PUBLIC        move_backward
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/17/2017  19:27:18  PAGE 3
+
+
+  C:0969H         PUBLIC        move_stop
+  B:0090H.1       PUBLIC        MOTOR1_A
+  B:0090H.3       PUBLIC        MOTOR2_A
+  B:0090H.0       PUBLIC        MOTOR1_B
+  B:0090H.2       PUBLIC        MOTOR2_B
+  D:00C8H         PUBLIC        T2CON
+  B:00A0H.0       PUBLIC        S_TRIG
+  C:0970H         PUBLIC        move_disable
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          _DELAY_US
+  D:0006H         SYMBOL        dval
+  C:0909H         LINE#         58
+  C:0909H         LINE#         59
+  C:0909H         LINE#         60
+  C:0911H         LINE#         62
+  C:0914H         LINE#         63
+  C:0916H         LINE#         64
+  C:0918H         LINE#         65
+  C:091AH         LINE#         66
+  C:091DH         LINE#         67
+  C:091FH         LINE#         68
+  C:0921H         LINE#         69
+  -------         ENDPROC       _DELAY_US
+  -------         PROC          _DELAY_MS
+  D:0004H         SYMBOL        dval
+  C:0922H         LINE#         72
+  C:0926H         LINE#         73
+  C:0926H         LINE#         74
+  C:0930H         LINE#         75
+  C:0930H         LINE#         76
+  C:0937H         LINE#         77
+  C:0939H         LINE#         78
+  -------         ENDPROC       _DELAY_MS
+  -------         PROC          GETPULSEWIDTH_US
+  C:08E6H         LINE#         32
+  C:08E6H         LINE#         33
+  C:08E6H         LINE#         35
+  C:08E9H         LINE#         36
+  C:08ECH         LINE#         37
+  C:08EEH         LINE#         38
+  C:08F0H         LINE#         39
+  C:08F6H         LINE#         40
+  C:08F8H         LINE#         41
+  C:08FAH         LINE#         42
+  C:0908H         LINE#         43
+  -------         ENDPROC       GETPULSEWIDTH_US
+  -------         PROC          MEASUREDISTANCECM
+  -------         DO            
+  D:0004H         SYMBOL        imp_duration
+  D:0002H         SYMBOL        distance
+  -------         ENDDO         
+  C:08B4H         LINE#         46
+  C:08B4H         LINE#         47
+  C:08B4H         LINE#         48
+  C:08B7H         LINE#         49
+  C:08B9H         LINE#         51
+  C:08BBH         LINE#         52
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/17/2017  19:27:18  PAGE 4
+
+
+  C:08C1H         LINE#         53
+  C:08C3H         LINE#         55
+  C:08C6H         LINE#         56
+  C:08CDH         LINE#         57
+  C:08D6H         LINE#         58
+  C:08D6H         LINE#         59
+  C:08E1H         LINE#         60
+  C:08E1H         LINE#         61
+  C:08E5H         LINE#         62
+  -------         ENDPROC       MEASUREDISTANCECM
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        distance
+  -------         ENDDO         
+  C:0800H         LINE#         31
+  C:0800H         LINE#         32
+  C:0800H         LINE#         33
+  C:0805H         LINE#         34
+  C:0808H         LINE#         36
+  C:080BH         LINE#         37
+  C:0812H         LINE#         38
+  C:0812H         LINE#         39
+  C:0812H         LINE#         59
+  C:0815H         LINE#         60
+  C:081CH         LINE#         61
+  C:0823H         LINE#         62
+  C:0839H         LINE#         63
+  C:0839H         LINE#         64
+  C:083CH         LINE#         65
+  C:0843H         LINE#         66
+  C:0846H         LINE#         67
+  C:0849H         LINE#         68
+  C:0850H         LINE#         69
+  C:0853H         LINE#         70
+  C:0856H         LINE#         71
+  C:085DH         LINE#         72
+  C:085DH         LINE#         75
+  -------         ENDPROC       MAIN
+  -------         PROC          CAR_INIT
+  C:093AH         LINE#         78
+  C:093AH         LINE#         79
+  C:093AH         LINE#         81
+  C:093DH         LINE#         82
+  C:0940H         LINE#         83
+  C:0943H         LINE#         84
+  C:0946H         LINE#         85
+  C:0949H         LINE#         87
+  C:094CH         LINE#         88
+  -------         ENDPROC       CAR_INIT
+  -------         PROC          MOVE_FORWARD
+  C:095BH         LINE#         91
+  C:095BH         LINE#         92
+  C:095BH         LINE#         94
+  C:095DH         LINE#         95
+  C:095FH         LINE#         96
+  C:0961H         LINE#         97
+  -------         ENDPROC       MOVE_FORWARD
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/17/2017  19:27:18  PAGE 5
+
+
+  -------         PROC          MOVE_BACKWARD
+  C:0962H         LINE#         99
+  C:0962H         LINE#         100
+  C:0962H         LINE#         102
+  C:0964H         LINE#         103
+  C:0966H         LINE#         104
+  C:0968H         LINE#         105
+  -------         ENDPROC       MOVE_BACKWARD
+  -------         PROC          MOVE_STOP
+  C:0969H         LINE#         107
+  C:0969H         LINE#         108
+  C:0969H         LINE#         110
+  C:096BH         LINE#         111
+  C:096DH         LINE#         112
+  C:096FH         LINE#         113
+  -------         ENDPROC       MOVE_STOP
+  -------         PROC          MOVE_DISABLE
+  C:0970H         LINE#         115
+  C:0970H         LINE#         116
+  C:0970H         LINE#         117
+  C:0972H         LINE#         118
+  C:0974H         LINE#         119
+  C:0976H         LINE#         120
+  -------         ENDPROC       MOVE_DISABLE
+  -------         PROC          ROTATE_RIGHT
+  C:0977H         LINE#         122
+  C:0977H         LINE#         123
+  C:0977H         LINE#         124
+  C:0979H         LINE#         125
+  C:097BH         LINE#         126
+  C:097DH         LINE#         127
+  -------         ENDPROC       ROTATE_RIGHT
+  -------         PROC          ROTATE_LEFT
+  C:097EH         LINE#         129
+  C:097EH         LINE#         130
+  C:097EH         LINE#         131
+  C:0980H         LINE#         132
+  C:0982H         LINE#         133
+  C:0984H         LINE#         134
+  -------         ENDPROC       ROTATE_LEFT
+  -------         PROC          ROTATE_DISABLE
+  C:0985H         LINE#         136
+  C:0985H         LINE#         137
+  C:0985H         LINE#         139
+  C:0987H         LINE#         140
+  C:0989H         LINE#         141
+  C:098BH         LINE#         142
+  -------         ENDPROC       ROTATE_DISABLE
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        ?C?UIDIV
+  C:085FH         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 012BH BYTE (14%) *
+******************************************************************************
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/17/2017  19:27:18  PAGE 6
+
+
+
+Program Size: data=11.0 xdata=0 code=399
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
