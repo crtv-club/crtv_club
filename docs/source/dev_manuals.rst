@@ -58,15 +58,16 @@ AT89S52
 А теперь, детали:
 
 - схема devboard для AT89S52:
-  http://www.electroschematics.com/11099/at89s52-minimum-development-board-8051-tutorial-2/
+  https://goo.gl/SEf8qQ
 - схема адаптера для разъема ISP (с 10 на 6 пинов):
-  https://static.rcgroups.net/forums/attachments/2/4/5/9/a3336720-212-10-6%20ISP%20adapter.jpg
+  https://goo.gl/17F1pd
 - распиновка Arduino Nano:
-  http://www.mdpi.com/sensors/sensors-17-00872/article_deploy/html/images/sensors-17-00872-g007.png
+  https://goo.gl/Znt4JP
 - подключение Arduino Nano в роли программатора и выбор
   соответсвующей прошивки для Arduino Nano:
-  https://geektimes.ru/post/255816/
+  https://goo.gl/pGjdqR
 - изменения в конфигурационном файлы AVRDUDE для поддержки AT89S52:
-  http://www.avrfreaks.net/comment/641272#comment-641272
-- подавать, точнее прошивать, с помощью AVRDUDESS, в качестве
-  программатора выбирать именно AVR ISP.
+  https://goo.gl/NBBsRd
+
+Подавать, точнее прошивать, с помощью AVRDUDESS, в качестве
+программатора выбирать именно AVR ISP.
