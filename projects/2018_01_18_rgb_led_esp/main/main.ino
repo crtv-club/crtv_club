@@ -10,15 +10,27 @@ IPAddress apIP(192, 168, 1, 1);
 DNSServer dnsServer;
 ESP8266WebServer webServer(80);
 
-String webpage = "<h1 style='text-align: center; margin-top: 45vh'>Hello world!</h1>";
+String webpage1 = "<h1 style='text-align: center'>Page 1</h1>";
+String webpage2 = "<h1 style='text-align: center'>Page 2</h1>";
+String webpage3 = "<h1 style='text-align: center'>Page 3</h1>";
+String header = ""
+"<header style='font-size: 15px'>"
+  "<a href='/1'><button style='width:30%; margin: 5px'>1</button></a>"
+  "<a href='/2'><button style='width:30%; margin: 5px'>2</button></a>"
+  "<a href='/3'><button style='width:30%; margin: 5px'>3</button></a>"
+ "</header>";
 
-int count = 0;
-
-void handleRoot() {
-  count = count + 1;
-  Serial.print("client ");
-  Serial.println(count);
-  webServer.send(200, "text/html", webpage);
+void handleRoot1() {
+  Serial.println("client view page 1");
+  webServer.send(200, "text/html", header + webpage1);
+}
+void handleRoot2() {
+  Serial.println("client view page 2");
+  webServer.send(200, "text/html", header + webpage2);
+}
+void handleRoot3() {
+  Serial.println("client view page 3");
+  webServer.send(200, "text/html", header + webpage3);
 }
 
 void setup() {
@@ -32,7 +44,9 @@ void setup() {
   WiFi.softAPConfig(apIP, apIP, IPAddress(255, 255, 255, 0));
   WiFi.softAP(ssid);
 
-  webServer.on("/", handleRoot);
+  webServer.on("/1", handleRoot1);
+  webServer.on("/2", handleRoot2);
+  webServer.on("/3", handleRoot3);
 
   webServer.begin();
 }

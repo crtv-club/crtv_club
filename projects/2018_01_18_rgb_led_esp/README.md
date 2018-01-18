@@ -1,49 +1,48 @@
 # RGB led & ESP8266
 
-### Объявление логина и пароля сети WiFi, необходимых для подключения
+коммит с примером многостраничного приложения на esp8266
 
+### Создание строковыъ переменных
+Первая страница
 ```
-const char *ssid = "RGB LED";
-const char *password = "ledIsOn";
-```
-
-### IP адрес сервера (ввести в адресную строку браузера)
-```
-IPAddress apIP(192, 168, 1, 1);
+String webpage1 = "<h1 style='text-align: center'>Page 1</h1>";
 ```
 
-### Текст, выводимый в браузере web-клиента
+Вторая страница
 ```
-String webpage = "<h1 style='text-align: center; margin-top: 45vh'>Hello world!</h1>";
+String webpage2 = "<h1 style='text-align: center'>Page 2</h1>";
 ```
 
-### Хендлер для обработки запросов по адресу 192.168.1.1/
-Отправляет клиенту мтроку с ответом
+Третья страница
 ```
-void handleRoot() {
-    ...
+String webpage3 = "<h1 style='text-align: center'>Page 3</h1>";
+```
+
+Общий заголовок для всех странц
+```
+String header = ""
+"<header style='font-size: 15px'>"
+  "<a href='/1'><button style='width:30%; margin: 5px'>1</button></a>"
+  "<a href='/2'><button style='width:30%; margin: 5px'>2</button></a>"
+  "<a href='/3'><button style='width:30%; margin: 5px'>3</button></a>"
+ "</header>";
+```
+
+### Обработчики для кадой страницы
+void handleRoot1() {
+  Serial.println("client view page 1");
+  webServer.send(200, "text/html", header + webpage1);
 }
-```
-
-### Создание точки подключения
-```
-void setup() {
-  ...
-  
-  WiFi.mode(WIFI_AP);
-  WiFi.softAPConfig(apIP, apIP, IPAddress(255, 255, 255, 0));
-  WiFi.softAP(ssid);
-
-  webServer.on("/", handleRoot);
-
-  webServer.begin();
+void handleRoot2() {
+  Serial.println("client view page 2");
+  webServer.send(200, "text/html", header + webpage2);
 }
-```
-
-### Запуск dns сервера и запуск слушателя подключения клиентов
-```
-void loop() {
-  dnsServer.processNextRequest();
-  webServer.handleClient();
+void handleRoot3() {
+  Serial.println("client view page 3");
+  webServer.send(200, "text/html", header + webpage3);
 }
-```
+
+### Подписание обработчиков на запросы
+  webServer.on("/1", handleRoot1);
+  webServer.on("/2", handleRoot2);
+  webServer.on("/3", handleRoot3);
