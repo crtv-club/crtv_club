@@ -1,1 +1,1 @@
-- список деталей, использованных в проекте: https://docs.google.com/spreadsheets/d/19fjAEZ54coTJc1buBvYipIVnhTc-1ejXQuSLURA8eFs/edit#gid=461163333
+- список деталей, использованных в проекте: https://goo.gl/Bkoav6
