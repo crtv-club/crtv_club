@@ -22,3 +22,4 @@
    list_of_software
    soldering_cheatsheet
    dev_manuals
+   at89s52_avrdude
