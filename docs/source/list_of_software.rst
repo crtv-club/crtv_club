@@ -9,6 +9,8 @@ Intel 8051
 - IDE (среда разработки) - `Keil C51 <https://www.keil.com/demo/eval/c51.htm>`_
 - драйвер на программатор - `Zadig <http://zadig.akeo.ie/>`_ (там нужно установить libusb-win32)
 - утилита для прошивки - `ProgISP <http://exploreembedded.com/wiki/AT89S_Series_8051_programmer>`_
+- open-source эмулятор - `EdSim51 <https://www.edsim51.com/>`_
+- боле навороченный эмулятор - Proteus (платный)
 
 AVR (Arduino и прочие)
 ----------------------
