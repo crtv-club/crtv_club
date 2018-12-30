@@ -19,7 +19,7 @@ AVR (Arduino и прочие)
 
 - IDE (среда разработки) - `Atmel Studio <http://www.microchip.com/development-tools/atmel-studio-7>`_
 - драйвер на программатор - `Zadig <http://zadig.akeo.ie/>`_
-- утилита для прошивки - `AVRDUDE <http://www.electrodragon.com/w/ProgISP>`_ с различными `GUI <http://blog.zakkemble.co.uk/avrdudess-a-gui-for-avrdude/>`_
+- утилита для прошивки - `AVRDUDE <https://learn.sparkfun.com/tutorials/pocket-avr-programmer-hookup-guide#using-avrdude-via-command-line>`_ с различными `GUI <http://blog.zakkemble.co.uk/avrdudess-a-gui-for-avrdude/>`_
 - плагин Arduino для VisualStudio и Atmel Studio - `VisualMicro <https://www.visualmicro.com/>`_
 
 Raspberry
