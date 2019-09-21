@@ -23,3 +23,4 @@
    soldering_cheatsheet
    dev_manuals
    at89s52_avrdude
+   at89s52_linux_dev
