@@ -206,6 +206,7 @@ Nordic SoftDevice - это бинарный файл, который распо�
 
 Больше информации про структуру флеш-памяти в nRF52:
 
-- Про адрес начала пользовательской прошивки: https://infocenter.nordicsemi.com/index.jsp?topic=%2Fsds_s132%2FSDS%2Fs1xx%2Fs130.html
+- Про адрес начала пользовательской прошивки: https://infocenter.nordicsemi.com/topic/sds_s132/SDS/s1xx/mem_usage/mem_resource_reqs.html
+- Про значение констант ``APP_CODE_BASE`` и ``APP_RAM_BASE``: https://infocenter.nordicsemi.com/topic/sds_s132/SDS/s1xx/mem_usage/mem_resource_map_usage.html
 - Про то, как различные версии SoftDevice имеют различные требования по memory layout: https://devzone.nordicsemi.com/nordic/short-range-guides/b/getting-started/posts/adjustment-of-ram-and-flash-memory
-- Информация про загрузчик и возможности обновлять SoftDevice "на лету": https://infocenter.nordicsemi.com/index.jsp?topic=%2Fsds_s132%2FSDS%2Fs1xx%2Fs130.html
+- Информация про загрузчик и возможности обновлять SoftDevice "на лету": https://infocenter.nordicsemi.com/topic/sds_s132/SDS/s1xx/mbr_bootloader/bootloader.html
