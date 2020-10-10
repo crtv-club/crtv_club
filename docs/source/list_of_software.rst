@@ -22,6 +22,16 @@ AVR (Arduino и прочие)
 - утилита для прошивки - `AVRDUDE <https://learn.sparkfun.com/tutorials/pocket-avr-programmer-hookup-guide#using-avrdude-via-command-line>`_ с различными `GUI <http://blog.zakkemble.co.uk/avrdudess-a-gui-for-avrdude/>`_
 - плагин Arduino для VisualStudio и Atmel Studio - `VisualMicro <https://www.visualmicro.com/>`_
 
+Nordic nRF52
+------------
+
+Стандартный набор ПО для nRF52 выглядит следующим образом:
+
+- IDE (среда разработки) - `Segger Embedded Studio for ARM <https://www.segger.com/downloads/embedded-studio>`_
+- утилита для прошивки - `openocd for Windows <https://gnutoolchains.com/arm-eabi/openocd/>`_, `openocd for GNU/Linux <http://openocd.org/getting-openocd/>`_
+- драйвер на st-link: `STSW-LINK009 <https://www.st.com/content/st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-utilities/stsw-link009.html>`_
+- примеры кода и стандартные библиотеки - `nRF5 SDK <https://www.nordicsemi.com/Software-and-tools/Software/nRF5-SDK/Download#infotabs>`_
+
 Raspberry
 ---------
 
