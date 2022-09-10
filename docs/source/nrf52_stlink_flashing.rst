@@ -20,16 +20,16 @@
 
 Под GNU/Linux единственное, что нужно сделать - добавить новое правило udev для ST-Link.
 
-Создайте файл ``/etc/udev/rules.d/99-openocd.rules`` со следующим содержимым:
+Создайте файл ``/etc/udev/rules.d/99-openocd.rules`` со следующим содержимым::
 
  #STLink V2
  ATTRS{idVendor}=="0483", ATTRS{idProduct}=="374b", MODE="664", GROUP="plugdev"
 
-Перезагрузите правила udev:
+Перезагрузите правила udev::
 
  sudo udevadm control --reload-rules && sudo udevadm trigger
 
-И убедитесь, что вы находитесь в группе plugdev:
+И убедитесь, что вы находитесь в группе plugdev::
 
  usermod -a -G plugdev YOUR_USERNAME_HERE
 
