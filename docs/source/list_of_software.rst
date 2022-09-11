@@ -32,6 +32,15 @@ Nordic nRF52
 - драйвер на st-link: `STSW-LINK009 <https://www.st.com/content/st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-utilities/stsw-link009.html>`_
 - примеры кода и стандартные библиотеки - `nRF5 SDK <https://www.nordicsemi.com/Software-and-tools/Software/nRF5-SDK/Download#infotabs>`_
 
+.. warning::
+   Новые версии Segger Embedded Studio (например 6.34a) плохо совместимы со старыми версиями nRF5 SDK (например 16.0.0). SES может спокойно удалить кусок нужного кода, заменить переменную на константу и провести другие оптимизации, которые сламают код глубоко в проекте. Примеры сообщений о багах:
+
+   1) https://devzone.nordicsemi.com/f/nordic-q-a/87736/segger-embedded-studio-latest-incompatible-with-nrf5-sdk;
+   2) https://devzone.nordicsemi.com/f/nordic-q-a/70106/segger-release-build-not-working;
+   3) https://forum.segger.com/index.php/Thread/7233-SOLVED-Prevent-const-variables-optimization/.
+
+   Таким образом **версия SES должна соответствовать версии SDK**. В частности для nRF5 SDK версии 16.0.0 рекомендуется использовать SES версии 4.18, как написано в Release Notes: https://infocenter.nordicsemi.com/index.jsp?topic=%2Fcom.nordic.infocenter.sdk5.v12.0.0%2Findex.html.
+
 Raspberry
 ---------
 
