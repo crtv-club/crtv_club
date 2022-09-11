@@ -39,7 +39,7 @@ Nordic nRF52
    2) https://devzone.nordicsemi.com/f/nordic-q-a/70106/segger-release-build-not-working;
    3) https://forum.segger.com/index.php/Thread/7233-SOLVED-Prevent-const-variables-optimization/.
 
-   Таким образом **версия SES должна соответствовать версии SDK**. В частности для nRF5 SDK версии 16.0.0 рекомендуется использовать SES версии 4.18, как написано в Release Notes: https://infocenter.nordicsemi.com/index.jsp?topic=%2Fcom.nordic.infocenter.sdk5.v12.0.0%2Findex.html.
+   Таким образом **версия SES должна соответствовать версии SDK**. В частности для nRF5 SDK версии 16.0.0 рекомендуется использовать SES версии 4.18, как написано в Release Notes: https://infocenter.nordicsemi.com/index.jsp?topic=%2Fsdk_nrf5_v16.0.0%2Findex.html&cp=8_5_1.
 
 Raspberry
 ---------
