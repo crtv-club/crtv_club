@@ -41,6 +41,9 @@ Nordic nRF52
 
    Таким образом **версия SES должна соответствовать версии SDK**. В частности для nRF5 SDK версии 16.0.0 рекомендуется использовать SES версии 4.18, как написано в Release Notes: https://infocenter.nordicsemi.com/index.jsp?topic=%2Fsdk_nrf5_v16.0.0%2Findex.html&cp=8_5_1.
 
+.. note::
+   Перед запуском SES версии 4.52c и ниже необходимо получить и активировать лицензию. Получить лицензию для nRF5x можно на сайте Segger: http://license.segger.com/Nordic.cgi. А вот для активации придется сперва поставить более новый SES: https://wiki.segger.com/Embedded_Studio_evaluation_period_error.
+
 Raspberry
 ---------
 
