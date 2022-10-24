@@ -19,8 +19,8 @@ Protection) nRF52 та очистити вмість флеш-пам'яті че
 повнорозмірної плати, а не USB-ключа), nRF52833 DK, тощо. Головне - робочий
 J-Link на платі.
 
-1. Встановіть на комп'ютері nrfjprog: `завантажити <https://www.nordicsemi.com/Products/Development-tools/nrf-command-line-tools>`.
-2. Знайдіть гребінки P1 та P20: `nRF52833 DK Connectors <https://infocenter.nordicsemi.com/topic/ug_nrf52833_dk/UG/dk/images/nRF52833/nrf52833_dk_board_connectors.svg>`.
+1. Встановіть на комп'ютері nrfjprog: `завантажити <https://www.nordicsemi.com/Products/Development-tools/nrf-command-line-tools>`_.
+2. Знайдіть гребінки P1 та P20: `nRF52833 DK Connectors <https://infocenter.nordicsemi.com/topic/ug_nrf52833_dk/UG/dk/images/nRF52833/nrf52833_dk_board_connectors.svg>`_.
 3. Під'єднайте контакти ``SWD IO``, ``SWD SCK``, ``RESET``, ``GND DETECT``,
    ``VTG`` гребінки P20 до контактів ``SWD IO``, ``SWD SCK``, ``RESET``,
    ``GND``, ``VDD`` (живлення, плюс) цільової плати.
