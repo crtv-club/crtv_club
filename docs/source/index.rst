@@ -23,3 +23,4 @@
    at89s52_avrdude
    at89s52_linux_dev
    nrf52_stlink_flashing
+   nrf52_write_protect_unlock
